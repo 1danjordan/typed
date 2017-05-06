@@ -1,11 +1,11 @@
 Package: typed
 Type: Package
 Title: Common types for annotating and type checking functions
-Version: 0.1.0
+Version: 0.0.9999
 Authors@R: person("Dan", "Jordan", email = "dandermotj@gmail.com", role = c('aut', 'cre'))
 Maintainer: Daniel Jordan <dandermotj@gmail.com>
 Description: typed defines common types so you don't have to.
-    Ensure type safety, improve readability and help development.
+    Ensure type safety, improve readability and speed up development.
     For use with types and typecheck.
 Depends:
     R (>= 3.3.0)

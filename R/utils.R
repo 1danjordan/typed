@@ -2,7 +2,7 @@
 #'
 #' If the expression raises an error or warning
 #' then try returns FALSE. This is to help
-#' writign checks when defining types, in particular
+#' writing checks when defining types, in particular
 #' comparisons. This solves the problem of
 #' "non-numeric argument to binary operator".
 #'
