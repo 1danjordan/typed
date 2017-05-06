@@ -1,4 +1,7 @@
-# Atomic Types
+type_define <- typeCheck::type_define
+
+#' Common types for annotating and type checking functions
+#' @export
 type.Atomic      <- type_define(is.atomic,     size = length)
 type.Vector      <- type_define(is.vector,     size = length)
 type.Numeric     <- type_define(is.numeric,    size = length)
@@ -10,14 +13,14 @@ type.Complex     <- type_define(is.complex,    size = length)
 type.Raw         <- type_define(is.raw,        size = length)
 
 type.Factor      <- type_define(is.factor,     size = length)
-type.Ordered     <- type_define(is.ordered,    size = length)
+type.OrderedFactor <- type_define(is.ordered,  size = length)
 type.List        <- type_define(is.list,       size = length)
 type.PairList    <- type_define(is.pairlist,   size = length)
 type.Unsorted    <- type_define(is.unsorted,   size = length)
 type.TimeSeries  <- type_define(is.ts,         size = length)
 
-type.NA          <- type_define(is.na)
-type.NULL        <- type_define(is.null,       size = function(){ 0 })
+type.NA_type     <- type_define(is.na)
+type.NULL_type   <- type_define(is.null,       size = function(){ 0 })
 
 type.NAN         <- type_define(is.nan,        size = length)
 type.Finite      <- type_define(is.finite,     size = length)
@@ -53,7 +56,7 @@ type.Natural     <- type_define(
   check = function(x) { try(all(x > 0)) },
   size  = length
 )
-type.WholeNum    <- type_define(
+type.WholeNumber <- type_define(
   check = function(x) { try(all(x %% 1 == 0)) },
   size  = length
 )
