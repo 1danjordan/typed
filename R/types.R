@@ -22,7 +22,6 @@ type.TimeSeries  <- type_define(is.ts,         size = length)
 type.NA_type     <- type_define(is.na)
 type.NULL_type   <- type_define(is.null,       size = function(){ 0 })
 
-type.NAN         <- type_define(is.nan,        size = length)
 type.Finite      <- type_define(is.finite,     size = length)
 type.Infinite    <- type_define(is.infinite,   size = length)
 
