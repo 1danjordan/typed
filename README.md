@@ -1,9 +1,13 @@
 # typed
 Common Types for use with TypeCheck in R
 
-typed gives you common types so you don't have to. typed complements types and typeCheck, 
-packages for annotating and type checking R functions. All you have to do is load typed
-and get on with writiing type safe R code.
+typed defines common types so you don't have to. typed complements 
+[types](https://github.com/jimhester/types) and [typeCheck](https://github.com/jimhester/typeCheck), 
+packages for annotating and type checking R functions. Load typed 
+and use well tested types like `Numeric`, `Matrix`, `DataFrame`, `Function` and many more. 
+
+typed is inspired by 
+[DefinitelyTyped](http://definitelytyped.org/) "the repository for high quality TypeScript type definitions".
 
 ```r
 library(typed)
@@ -36,7 +40,11 @@ methods("type")
 [16] type.Integer       type.Leaf          type.List          type.Logical       type.Matrix  
 [21] ...  
 ```
+If you're more of a `snake_case` kind of person, you can use `type_alias()` to create an alias.
 
+```r
+type.numeric <- type_alias(Numeric)
+```
 
 While R will never be strictly typed (that's one of its greatest features!), 
 optional types are a wonderful addition for R developers who want them.
@@ -45,9 +53,4 @@ typed is an experiment in writing strictly typed R code.
 R's origins have resulted in a complicated and little understood hierarchy of 
 informal types. types, typeCheck and typed provide a clean interface to work from. 
 
-If you don't like upper case type names, you can use `type_alias()`.
-
-```r
-type.numeric <- type_alias(Numeric)
-```
 
